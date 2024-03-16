@@ -4,7 +4,7 @@
 <div class="content">
     <div class="">
         <div class="page-header-title">
-            <h4 class="page-title">Variables</h4>
+            <h4 class="page-title">Solicitudes</h4>
             <div style="text-align:right;">
                 <button type="button" class="btn btn-success waves-effect waves-light"
                         onClick=" window.location.href='/variablecreate' " style="text-align:center;">+
@@ -18,23 +18,40 @@
     <div class="page-content-wrapper">
         <div class="container">
             <!-- Content page -->
-
             <div class="panel panel-default">
                 <div class="panel-body">
 
                     <table class="table table-hover">
                         <thead>
-                        <tr style="color:#0E2EB0">
-                            <th>Variable</th>
-                        </tr>
+                            <tr style="color:#0E2EB0">
+                                <th>Solicitud</th>
+                                <th>Primer Nombre</th>
+                                <th>Apellido</th>
+                                <th>Tipo de Documento</th>
+                                <th>Número de Documento</th>
+                                <th>Fecha de Nacimiento</th>
+                                <th>Ciudad de Residencia</th>
+                                <th>Correo Electrónico</th>
+                                <th>Teléfono Celular</th>
+                                <th>Ingresos Mensuales</th>
+                            </tr>
                         </thead>
                         <tbody>
 
-                        {% for variable in variable_list %}
-                        <tr>
-                            <td>{{ variable.name }}</td>
-                        </tr>
-                        {% endfor %}
+                            {% for variable in variable_list %}
+                            <tr>
+                                <td>{{ variable.name }}</td>
+                                <td>{{ variable.first_name }}</td>
+                                <td>{{ variable.last_name }}</td>
+                                <td>{{ variable.document_type }}</td>
+                                <td>{{ variable.document_number }}</td>
+                                <td>{{ variable.date_of_birth }}</td>
+                                <td>{{ variable.city_of_residence }}</td>
+                                <td>{{ variable.email }}</td>
+                                <td>{{ variable.phone_number }}</td>
+                                <td>{{ variable.monthly_income }}</td>
+                            </tr>
+                            {% endfor %}
 
                         </tbody>
                     </table>
